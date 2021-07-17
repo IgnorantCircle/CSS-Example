@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纯CSS实现轮播图</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <ul class="slides">
+       <!-- 加入三个按钮，用于控制轮播图的切换 ,设定相同的name，这样就可以将它们归纳为同一组按钮-->
+       <!-- 第一个按钮加入checked，默认选中 -->
+       <!-- radio按钮要写在上面，因为可以通过radio:checked判断已选择的radio按钮，再通过通用兄弟选择器~找到它同一层之后的元素
+        而css只能找之后同一层的元素，不能找之前同一层的元素，所以radio要写再前面
+     -->
+       <input type="radio" name="control" id="control-1" checked>
+       <input type="radio" name="control" id="control-2">
+       <input type="radio" name="control" id="control-3">
+        
+       <li class="slide">1</li>
+       <li class="slide">2</li>
+       <li class="slide">3</li>
+
+       <!-- label来控制按钮，目的是为了自定义样式 -->
+       <div class="controls-visible">
+        <label for="control-1"></label>
+        <label for="control-2"></label>
+        <label for="control-3"></label>
+    </div> 
+   </ul>
+</body>
+
+</html>
