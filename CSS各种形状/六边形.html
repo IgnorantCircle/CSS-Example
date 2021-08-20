@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>六边形</title>
+    <style>
+        /*六边形是由两个三角形和一个矩形进行组合得到的。*/
+        .hexagon{
+            margin: 100px;
+            width: 200px;
+            height: 100px;
+            background-color: skyblue;
+            position: relative;
+        }
+        .hexagon::before{
+            content: "";
+            position: absolute;
+            top:-60px;
+            left:0;
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 60px solid skyblue;
+
+        }
+
+        .hexagon::after{
+            content: "";
+            position: absolute;
+            bottom:-60px;
+            left:0;
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-top: 60px solid skyblue;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="hexagon"></div>
+</body>
+</html>

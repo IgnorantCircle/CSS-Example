@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心形</title>
+    <style>
+        /*心形是由两个圆形和一个矩形进行组合得到的。*/
+        /*先画一个选择45度的正方形*/
+        .heart{
+            margin: 50px; /*为了能让整个图形显示出来*/
+            width: 100px;
+            height: 100px;
+            transform: rotate(45deg);
+            background-color: red;
+        }
+
+        /*在这个正方形的前后加上圆形*/
+        .heart::after,.heart::before{
+            content:"";
+            width: 100px;
+            height:100px;
+            border-radius:50px;
+            display: block;
+            background-color: red;
+            position: absolute;
+            top:-50%;
+            left:0;
+        }
+
+        .heart::before{
+            top:0;
+            left:-50%
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="heart"></div>
+</body>
+</html>
